@@ -1,0 +1,29 @@
+.social-icons {
+  text-align: center;
+
+  &__icon {
+    background-color: $mainOrange;
+    /* display inline-block to make sure all the icons are in one line, but stil have possiblity to modify its custom height. */
+    display: inline-block;
+    margin: 0 5px 10px 5px;
+    width: 33%;
+    height: 72px;
+    position: relative;
+
+    @mixin atSmall {
+      margin: 0 5px;
+      width: 72px;
+      height: 72px;
+    }
+
+    .icon {
+      /* display block to applied the automatic width and height that was set up with sprites. */
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+}
