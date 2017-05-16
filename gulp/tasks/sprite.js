@@ -16,7 +16,7 @@ var config = {
   }
 };
 
-//to delete old file, so we only have one svg file for icons
+//to delete old file, so we will always have only one svg file for icons
 gulp.task('beginClean', function() {
   return del(['./app/temp/sprite', './app/assets/images/sprites']);
 });
