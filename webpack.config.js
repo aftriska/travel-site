@@ -1,11 +1,14 @@
 module.exports = {
   //to tell webpack which file it should begin looking at to create bundle
-  entry: "./app/assets/scripts/App.js",
+  entry: {
+    App: "./app/assets/scripts/App.js",
+    Vendor: "./app/assets/scripts/Vendor.js"
+  },
 
   //to tell webpack where the final product bundled file should be output to
   output: {
     path: __dirname + "/app/temp/scripts",
-    filename: "App.js"
+    filename: "[name].js"
   },
 
   module: {
